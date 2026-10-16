@@ -22,7 +22,7 @@ header {
 }
 
 .logo {
-  max-width: 420px;
+  max-width: 550px;
   width: 90%;
 }
 
@@ -342,6 +342,11 @@ footer.social .btn.google {
 ======================= */
 
 @media (max-width: 600px) {
+
+ .logo {
+  max-width: 400px;
+  width: 100%;
+ }
 
   .search-wrapper {
     max-width: 300px;
