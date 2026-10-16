@@ -141,5 +141,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const counter = document.getElementById("visit-count");
   if (counter) counter.textContent = visits;
+    /* =========================
+     DESPLEGAR SABORES DE BEBIDAS
+  ========================= */
+
+  document.querySelectorAll(".flavors-toggle").forEach(button => {
+    button.addEventListener("click", () => {
+      const panel = button.nextElementSibling;
+      const isOpen = button.getAttribute("aria-expanded") === "true";
+
+      panel.hidden = isOpen;
+      button.setAttribute("aria-expanded", String(!isOpen));
+
+      button.textContent = isOpen
+        ? "Ver sabores ▼"
+        : "Ocultar sabores ▲";
+    });
+  });
 
 });
